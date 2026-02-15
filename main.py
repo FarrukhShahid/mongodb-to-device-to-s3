@@ -16,7 +16,7 @@ def main():
                         help='MongoDB connection URI (default taken from .env)')
     parser.add_argument('--db-name', type=str, default=os.getenv('DB_NAME'),
                         help='Name of the MongoDB database to backup (default taken from .env)')
-    parser.add_argument('--output-dir', type=str, default=os.getenv('OUTPUT_DIR', 'mongodb_backup'),
+    parser.add_argument('--output-dir', type=str, default=os.getenv('OUTPUT_DIR', 'backups/mongodb_backup'),
                         help='Directory to store the backup (default taken from .env or "mongodb_backup")')
 
     # Parameters for S3 upload

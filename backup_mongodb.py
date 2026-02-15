@@ -17,7 +17,9 @@ def backup_mongodb(mongo_uri, db_name, output_dir, batch_size=1000):
 
     # Iterate over collections and backup data in batches
     try:
-        for collection_name in db.list_collection_names():
+        collections = db.list_collection_names()
+        print(f'Found {len(collections)} collections to backup')
+        for collection_name in collections:
             collection = db[collection_name]
             total_docs = collection.count_documents({})  # Get the total number of documents
             print(f'Backing up {collection_name} collection with {total_docs} documents')

@@ -1,3 +1,4 @@
 *pip_*
 __pycache__
 backups/*
+.env
