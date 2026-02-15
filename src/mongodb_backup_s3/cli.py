@@ -1,8 +1,8 @@
 import argparse
 import os
 from dotenv import load_dotenv
-from backup_mongodb import backup_mongodb
-from upload_to_s3 import upload_to_s3
+from .backup_mongodb import backup_mongodb
+from .upload_to_s3 import upload_to_s3
 
 # Load environment variables from .env file
 load_dotenv()
